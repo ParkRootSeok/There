@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.myprofileFragment -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, MyprofileFragment())
+                        .replace(R.id.main_frm, MyProfileFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
