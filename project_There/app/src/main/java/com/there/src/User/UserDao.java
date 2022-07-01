@@ -1,5 +1,6 @@
 package com.there.src.User;
 
+import com.there.src.User.model.GetUserInfoRes;
 import com.there.src.User.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -17,9 +18,10 @@ public class UserDao {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    public User selectUserInfo(int userid) {
-        String selectUserInfoQuery = "select * from user where userid = ?";
-        int selectUserInfoParam = userid;
+    // 유저 피드 조회 API - 유저 정보
+    public GetUserInfoRes selectUserInfo(int userIdx) {
+        String selectUserInfoQuery = "select * from User where userId = ?";
+        int selectUserInfoParam = userIdx;
 
         return this.jdbcTemplate.queryForObject(selectUserInfoQuery, (rs, rowNum) -> new User(
                         rs.getInt("userid"),
