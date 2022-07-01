@@ -37,15 +37,14 @@ public class UserController {
     @ResponseBody
     @GetMapping("/{userIdx}")
     public BaseResponse<GetUserFeedRes> getUserFeed(@PathVariable("userIdx")int userIdx) {
-        try {
+        try{
 
-            GetUserFeedRes getUserFeed = userProvider.retrieveUserFeed(userIdx, userIdx);
+            GetUserFeedRes getUserFeed = userProvider.retrieveUserFeed(userIdx);
 
             return new BaseResponse<>(getUserFeed);
 
-        } catch (BaseException exception) {
+        } catch(BaseException exception){
             return new BaseResponse<>((exception.getStatus()));
         }
-
     }
 }

@@ -27,16 +27,10 @@ public class UserProvider {
 
     }
 
-    public GetUserFeedRes retrieveUserFeed(int userIdxByJwt, int userIdx) throws BaseException {
-
-        // Boolean _isMyFeed = true;
+    public GetUserFeedRes retrieveUserFeed(int userIdx) throws BaseException {
 
 
         try {
-
-            /*if(userIdxByJwt != userIdx) {
-                _isMyFeed = false;
-            }*/
 
             GetUserInfoRes getUserInfo = userDao.selectUserInfo(userIdx);
             List<GetUserPostsRes> getUserPosts = userDao.selectUserPosts(userIdx);
