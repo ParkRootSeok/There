@@ -1,16 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="내 프로필"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="42dp">
+        <ImageView
+            android:id="@+id/iv_myprofile_profile"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/img_myprofile_profilephoto" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity=""
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp">
+            <TextView
+                android:id="@+id/tv_myprofile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름" />
+            <TextView
+                android:id="@+id/tv_myprofile_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="작가명"/>
+            <TextView
+                android:id="@+id/tv_myprofile_follownum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" N follwers · N following "/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_myprofile_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:textSize="12sp"
+                    android:text="프로필 편집"
+                    android:background="@drawable/btn_myprofile_border"/>
+                <Button
+                    android:id="@+id/btn_myprofile_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="내 지갑"
+                    android:background="@drawable/btn_myprofile_border"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="28dp"
+        android:padding="16dp"
+        android:background="#F5F5F5">
+        <TextView
+            android:id="@+id/tv_myprofile_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="소개글 안녕하세요!!"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insta"></TextView>
+        <TextView
+            android:id="@+id/tv_myprofile_instaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="인스타 아이디"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Git"></TextView>
+        <TextView
+            android:id="@+id/tv_myprofile_gitid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디"></TextView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="10dp">
+            <ImageView android:src="@drawable/img_myprofile_record" />
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+        </GridLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_myprofile_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="기록하기"
+        android:background="@drawable/btn_myprofile_border"/>
+
+</LinearLayout>
+
