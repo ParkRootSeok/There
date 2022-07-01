@@ -23,7 +23,7 @@ class MyRecordFragment :Fragment() {
         binding = FragmentMyrecordBinding.inflate(inflater, container, false)
 
         //하단 창 전환
-        val myRecordAdapter = MyrecordVPAdapter(this)
+        val myRecordAdapter = MyRecordVPAdapter(this)
         binding.myrecordContentVp.adapter = myRecordAdapter
         TabLayoutMediator(binding.tabMyrecordTl, binding.myrecordContentVp){
             tab, position ->
