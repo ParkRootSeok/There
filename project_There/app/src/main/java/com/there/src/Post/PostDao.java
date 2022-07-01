@@ -65,6 +65,29 @@ public class PostDao {
                 checkUserPostParams);
     }
 */
+
+    //!-- ethan
+    // 게시물 생성함수
+    public int insertPost(int userIdx, String content){
+        String insertPostQuery = "INSERT INTO Post(userIdx, content) VALUES (?, ?)" ;
+        Object []insertPostParams = new Object[] {userIdx, content};
+        this.jdbcTemplate.update(insertPostQuery,
+                insertPostParams);
+        String lastInsertIdxQuery = "select last_insert_id()";
+        return this.jdbcTemplate.queryForObject(lastInsertIdxQuery, int.class);
+    }
+
+    // 이미지 넣어주는 함수
+    public int insertPostImg(int postIdx, String imgUrl){
+        String insertPostImgQuery = "INSERT INTO PostImgUrl(postIdx, imgUrl) VALUES (?, ?)" ;
+        Object []insertPostImgParams = new Object[] {postIdx, imgUrl};
+        this.jdbcTemplate.update(insertPostImgQuery,
+                insertPostImgParams);
+
+        String lastInsertIdxQuery = "select last_insert_id()";
+        return this.jdbcTemplate.queryForObject(lastInsertIdxQuery, int.class);
+    }
+
     //db 출력 확인
     public static void main(String[] args) {
             PostDao postDao = new PostDao();
