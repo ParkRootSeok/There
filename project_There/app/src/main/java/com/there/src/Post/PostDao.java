@@ -1,4 +1,4 @@
-package com.there.Post;
+package com.there.src.Post;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

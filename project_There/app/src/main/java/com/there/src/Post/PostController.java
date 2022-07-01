@@ -1,7 +1,6 @@
-package com.there.Post;
+package com.there.src.Post;
 
 import com.there.User.model.Post;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

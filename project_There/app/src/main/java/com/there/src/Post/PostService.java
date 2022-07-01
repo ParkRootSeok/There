@@ -1,4 +1,4 @@
-package com.there.Post;
+package com.there.src.Post;
 
 public class PostService {
     @Service

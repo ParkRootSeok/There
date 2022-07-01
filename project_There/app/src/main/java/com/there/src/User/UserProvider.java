@@ -1,4 +1,4 @@
-package com.there.User;
+package com.there.src.User;
 
 public class UserProvider {
 }

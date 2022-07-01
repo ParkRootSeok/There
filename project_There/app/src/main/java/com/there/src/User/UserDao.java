@@ -1,14 +1,13 @@
-package com.there.User;
+package com.there.src.User;
 
-import com.there.User.model.User;
-import lombok.extern.apachecommons.CommonsLog;
+import com.there.src.User.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 
-@Component
+@Repository
 public class UserDao {
 
     private JdbcTemplate jdbcTemplate;
