@@ -1,5 +1,6 @@
 package com.there.src.User;
 
+import com.there.config.BaseException;
 import com.there.config.BaseResponse;
 import com.there.src.User.model.GetUserFeedRes;
 import org.slf4j.Logger;
