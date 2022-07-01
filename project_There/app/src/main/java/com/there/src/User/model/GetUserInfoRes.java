@@ -9,10 +9,10 @@ import lombok.Setter;
 @AllArgsConstructor
 public class GetUserInfoRes {
 
-    private int userid;
+    private int userId;
     private String profileImgUrl;
     private String name;
-    private String nickname;
+    private String nickName;
     private String introduction;
 
 }
