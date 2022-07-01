@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/btn_myrecord_backarrow_iv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/btn_myrecord_backarrow"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="13dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/btn_myrecord_add_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/btn_myrecord_add"/>
+
+        <ImageView
+            android:id="@+id/btn_myrecord_edit_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/btn_myrecord_edit"/>
+
+        <ImageView
+            android:id="@+id/btn_myrecord_delete_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/btn_myrecord_delete"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myrecord_profile_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_myrecord_backarrow_iv"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_myrecord_profile_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/img_myrecord_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/text_myrecord_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름"
+            android:textSize="38px"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/img_myrecord_profile_iv"
+            app:layout_constraintTop_toTopOf="@id/img_myrecord_profile_iv"
+            app:layout_constraintBottom_toTopOf="@id/text_myrecord_nickname_tv"
+            android:layout_marginStart="8dp"/>
+        <TextView
+            android:id="@+id/text_myrecord_nickname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="작가명"
+            android:textSize="38px"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/img_myrecord_profile_iv"
+            app:layout_constraintBottom_toBottomOf="@id/img_myrecord_profile_iv"
+            app:layout_constraintTop_toBottomOf="@id/text_myrecord_name_tv"
+            android:layout_marginStart="8dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/img_context_myrecord_sv"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myrecord_profile_cl"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_myrecord_noimg_iv"
+                android:layout_width="match_parent"
+                android:layout_height="302dp"
+                android:src="@drawable/img_myrecord_noimg" />
+
+            <TextView
+                android:id="@+id/text_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:text="그림에 대한 설명..."
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/menu_myrecord_fragmnent_ll"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/img_myrecord_line_iv"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:layout_marginTop="5dp">-->
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_myrecord_like_off_iv"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/btn_myrecord_like_off"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_myrecord_folder_iv"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:src="@drawable/btn_myrecord_folder"-->
+<!--            android:layout_marginStart="3dp"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_myrecord_chatting_iv"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/btn_myrecord_chatting"-->
+<!--            android:layout_marginStart="3dp"/>-->
+<!--    </LinearLayout>-->
+
+    <ImageView
+        android:id="@+id/img_myrecord_line_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_myrecord_line"
+        app:layout_constraintTop_toBottomOf="@id/img_context_myrecord_sv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:id="@+id/btn_myrecord_like_off_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/btn_myrecord_like_off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_myrecord_line_iv"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_myrecord_tl"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toEndOf="@id/btn_myrecord_like_off_iv"
+        app:layout_constraintTop_toTopOf="@id/btn_myrecord_like_off_iv"
+        app:layout_constraintBottom_toBottomOf="@id/btn_myrecord_like_off_iv" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/myrecord_content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_myrecord_like_off_iv"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
