@@ -1,4 +1,4 @@
-package com.there.Post.model;
+package com.there.src.Post.model;
 
 public class GetPostsRes {
     private int postid;

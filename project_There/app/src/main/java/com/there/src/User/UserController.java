@@ -1,7 +1,5 @@
-package com.there.User;
+package com.there.src.User;
 
-import com.there.User.model.User;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
