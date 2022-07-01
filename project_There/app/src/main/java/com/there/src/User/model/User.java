@@ -7,13 +7,15 @@ import lombok.Data;
 @AllArgsConstructor
 public class User {
 
-    private int userid;
-    private String nickname;
+    private int userIdx;
+    private String nickName;
     private String email;
-    private String name;
-    private String sex;
+    private String profileImgUrl;
+    private String Info;
     private String birth;
     private String status;
+    private String sex;
+    private String name;
 
 
 }

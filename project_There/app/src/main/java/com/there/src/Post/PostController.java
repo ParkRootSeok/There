@@ -13,11 +13,9 @@ public class PostController {
 
     @Autowired
     private final PostProvider postProvider;
-    @Autowired
-    private final PostService postService;
 
-    public PostController(PostProvider postProvider, PostService postService){
+    public PostController(PostProvider postProvider){
         this.postProvider = postProvider;
-        this.postService = postService;
+
     }
 }

@@ -32,7 +32,7 @@ public class UserProvider {
         // Boolean _isMyFeed = true;
 
 
-        try{
+        try {
 
             /*if(userIdxByJwt != userIdx) {
                 _isMyFeed = false;
@@ -43,12 +43,11 @@ public class UserProvider {
 
             GetUserFeedRes getUserFeed = new GetUserFeedRes(getUserInfo, getUserPosts);
             return getUserFeed;
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             System.out.println(exception);
             throw new BaseException(DATABASE_ERROR);
         }
 
 
-
+    }
 }
