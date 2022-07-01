@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.there.databinding.FragmentMyprofileBinding
 
-class MyprofileFragment:Fragment() {
+
+class MyProfileFragment : Fragment(){
     lateinit var binding: FragmentMyprofileBinding
 
     override fun onCreateView(
@@ -16,6 +17,10 @@ class MyprofileFragment:Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMyprofileBinding.inflate(inflater, container, false)
+        binding.btnMyprofileRecord.setOnClickListener {
+            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, MyrecordFragment()).commitAllowingStateLoss()
+        }
         return binding.root
     }
-}
+
+    }

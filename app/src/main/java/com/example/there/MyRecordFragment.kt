@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.there.databinding.FragmentMyrecordBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
-class MyrecordFragment :Fragment() {
+class MyRecordFragment :Fragment() {
     lateinit var binding : FragmentMyrecordBinding
 
     private val information = arrayListOf(R.drawable.btn_myrecord_folder, R.drawable.btn_myrecord_chatting);
@@ -20,9 +20,11 @@ class MyrecordFragment :Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        binding = FragmentMyrecordBinding.inflate(inflater, container, false)
+
         //하단 창 전환
-        val myrecordAdapter = MyrecordVPAdapter(this)
-        binding.myrecordContentVp.adapter = myrecordAdapter
+        val myRecordAdapter = MyRecordVPAdapter(this)
+        binding.myrecordContentVp.adapter = myRecordAdapter
         TabLayoutMediator(binding.tabMyrecordTl, binding.myrecordContentVp){
             tab, position ->
             tab.setIcon(information[position])
@@ -30,8 +32,9 @@ class MyrecordFragment :Fragment() {
 
         //이전 페이지 이동
         binding.btnMyrecordBackarrowIv.setOnClickListener {
-            (context as MainActivity)
+            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, MyProfileFragment()).commitAllowingStateLoss()
         }
+
         return binding.root
     }
 }
