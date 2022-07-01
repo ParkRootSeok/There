@@ -13,7 +13,7 @@ public class GetUserFeedRes {
 
     private boolean _isMyFeed;
     private GetUserInfoRes getUserInfo;
-    private List<GetUserPostsRes> getUserPosts;
+   /* private List<GetUserPostsRes> getUserPosts;*/
 
 
 }
