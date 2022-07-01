@@ -16,7 +16,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="42dp">
         <ImageView
-            android:id="@+id/imgbtn_myprofile_profile"
+            android:id="@+id/iv_myprofile_profile"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:layout_alignParentLeft="true"
@@ -52,13 +52,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:textSize="12sp"
-                    android:text="프로필 편집" />
+                    android:text="프로필 편집"
+                    android:background="@drawable/btn_myprofile_border"/>
                 <Button
                     android:id="@+id/btn_myprofile_wallet"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:layout_marginLeft="8dp"
-                    android:text="내 지갑" />
+                    android:text="내 지갑"
+                    android:background="@drawable/btn_myprofile_border"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -68,6 +70,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="32dp"
+        android:layout_marginBottom="28dp"
         android:padding="16dp"
         android:background="#F5F5F5">
         <TextView
@@ -96,15 +99,32 @@
             android:layout_height="wrap_content"
             android:text="아이디"></TextView>
     </LinearLayout>
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    </GridLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="10dp">
+            <ImageView android:src="@drawable/img_myprofile_record" />
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+            <ImageView android:src="@drawable/img_myprofile_record"/>
+        </GridLayout>
+    </ScrollView>
     <Button
         android:id="@+id/btn_myprofile_record"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="기록하기"/>
+        android:text="기록하기"
+        android:background="@drawable/btn_myprofile_border"/>
 
 </LinearLayout>

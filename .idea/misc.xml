@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android-sdk/AndroidStudioProjects/There/app/src/main/res/drawable/btn_myprofile.xml" value="0.1735" />
+        <entry key="..\:/android-sdk/AndroidStudioProjects/There/app/src/main/res/drawable/btn_myprofile_border.xml" value="0.1695" />
+        <entry key="..\:/android-sdk/AndroidStudioProjects/There/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1705" />
         <entry key="..\:/android-sdk/AndroidStudioProjects/There/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/android-sdk/AndroidStudioProjects/There/app/src/main/res/layout/fragment_myprofile.xml" value="0.15625" />
+        <entry key="..\:/android-sdk/AndroidStudioProjects/There/app/src/main/res/layout/fragment_myprofile.xml" value="0.25" />
       </map>
     </option>
   </component>
