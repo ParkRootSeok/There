@@ -124,6 +124,7 @@
         android:id="@+id/btn_myprofile_record"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="기록하기"
         android:background="@drawable/btn_myprofile_border"/>
 
