@@ -10,6 +10,6 @@ import lombok.Setter;
 public class GetUserPostsRes {
 
     private int postIdx;
-    private String postImgUrl;
+    private String imgUrl;
 
 }
