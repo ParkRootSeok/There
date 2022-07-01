@@ -20,6 +20,7 @@ class MyrecordFragment :Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        //하단 창 전환
         val myrecordAdapter = MyrecordVPAdapter(this)
         binding.myrecordContentVp.adapter = myrecordAdapter
         TabLayoutMediator(binding.tabMyrecordTl, binding.myrecordContentVp){
@@ -27,6 +28,10 @@ class MyrecordFragment :Fragment() {
             tab.setIcon(information[position])
         }.attach()
 
+        //이전 페이지 이동
+        binding.btnMyrecordBackarrowIv.setOnClickListener {
+            (context as MainActivity)
+        }
         return binding.root
     }
 }
