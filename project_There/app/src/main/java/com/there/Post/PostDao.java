@@ -17,13 +17,13 @@ public class PostDao {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    // 게시글 리스트 조회
-    public List<GetPostsRes> selectPosts(int userid){
-        String selectUserPostsQuery = "select * from post where postid = ?";
-        int selectUserPostsParam = userid;
+    // 게시글 조회
+    public Post selectPostInfo(int postid){
+        String selectPostInfoQuery = "select * from post where postid = ?";
+        int selectPostsParam = postid;
 
-        return this.jdbcTemplate.queryForObject(selectUserPostsQuery,
-                (rs, rowNum) -> new GetPostsRes(
+        return this.jdbcTemplate.queryForObject(selectPostsQuery,
+                (rs, rowNum) -> new Post(
                         rs.getInt("postid"),
                         rs.getString("imgsrc"),
                         rs.getString("content"),
@@ -32,8 +32,11 @@ public class PostDao {
                         rs.getString("userid")),
                 selectUserPostsParam)
                 ;
+    }
+    public static void main(String[] args){
+        PostDao postDao = new PostDao();
+        Post post = postDao.selectPostInfo(1);
 
-
-
+        System.out.println(post.getPostid());
     }
 }
