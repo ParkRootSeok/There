@@ -1,11 +1,10 @@
 package com.there.src.Post.model;
 
-public class GetPostsRes {
+public class Post {
     private int postid;
     private String imgsrc;
     private String content;
-    private String created_at;
-    private String sex;
-    private String birth;
+    private String create_at;
     private String status;
+    private int userid;
 }

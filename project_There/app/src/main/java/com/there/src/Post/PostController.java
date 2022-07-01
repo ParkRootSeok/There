@@ -1,6 +1,5 @@
 package com.there.src.Post;
 
-import com.there.User.model.Post;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
