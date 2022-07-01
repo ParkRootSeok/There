@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/layout/fragment_chatting.xml" value="0.13994439295644115" />
         <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/layout/fragment_comment.xml" value="0.22010869565217392" />
         <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/layout/fragment_history.xml" value="0.22010869565217392" />
+        <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/layout/fragment_home.xml" value="0.13994439295644115" />
+        <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/layout/fragment_myprofile.xml" value="0.13994439295644115" />
         <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/layout/fragment_myrecord.xml" value="0.1985494106980961" />
+        <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/layout/fragment_search.xml" value="0.13994439295644115" />
+        <entry key="..\:/Users/jieun/AndroidStudioProjects/There_android/app/src/main/res/menu/bottoem_nav_menu.xml" value="0.13994439295644115" />
       </map>
     </option>
   </component>
