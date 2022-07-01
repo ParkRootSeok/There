@@ -1,5 +1,7 @@
 package com.there.src.User;
 
+import com.there.config.BaseResponse;
+import com.there.src.User.model.GetUserFeedRes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,10 +22,29 @@ public class UserController {
 
 
 
-
     public UserController(UserProvider userProvider, UserService userService){
         this.userProvider = userProvider;
         this.userService = userService;
+    }
+
+    /**
+     * 유저 피드 조회 API
+     * [GET] /users/:userIdx
+     * @return BaseResponse<GetUserFeedRes>
+     */
+
+    @ResponseBody
+    @GetMapping("/{userIdx}")
+    public BaseResponse<GetUserFeedRes> getUserFeed(@PathVariable("userIdx")int userIdx) {
+        try{
+
+            GetUserFeedRes getUserFeed = userProvider.retrieveUserFeed(userIdx, userIdx);
+
+            return new BaseResponse<>(getUserFeed);
+
+        } catch(BaseException exception){
+            return new BaseResponse<>((exception.getStatus()));
+        }
     }
 
 
