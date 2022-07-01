@@ -19,6 +19,7 @@ public class UserDao {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
+    // !-- ethan
     // 유저 피드 조회 API - 유저 정보
     public GetUserInfoRes selectUserInfo(int userIdx) {
         String selectUserInfoQuery = "select * from User where userIdx = ?";
@@ -27,32 +28,31 @@ public class UserDao {
         return this.jdbcTemplate.queryForObject(selectUserInfoQuery,
                 (rs, rowNum) -> new GetUserInfoRes(
                         rs.getInt("userIdx"),
+                        rs.getString("name"),
                         rs.getString("nickName"),
-                        rs.getString("email"),
                         rs.getString("profileImgUrl"),
-                        rs.getString("Info"),
-                        rs.getString("birth"),
-                        rs.getString("status"),
-                        rs.getString("sex"),
-                        rs.getString("name")),
-                selectUserInfoParam);
+                        rs.getString("Info")
+                        ), selectUserInfoParam);
     }
 
+    // !-- ethan
     // 유저 피드 조회 API - 게시물 리스트
     public List<GetUserPostsRes> selectUserPosts(int userIdx){
 
         String selectUserPostsQuery ="select p.postIdx as postIdx,\n" +
-                "       p.imgUrl as imgUrl\n" +
+                "       p.imgUrl as imgUrl,\n" +
+                "       p.content as content\n" +
                 "from Post as p\n" +
                 "    join User as u on u.userIdx = p.userIdx\n" +
                 "where p.status ='ACTIVE' and u.userIdx=?\n" +
-                "order by p.created_At desc;\n";
+                "order by p.created_At desc;";
         int selectUserPostsParam = userIdx;
 
         return this.jdbcTemplate.query(selectUserPostsQuery,
                 (rs, rowNum) -> new GetUserPostsRes(
                         rs.getInt("postIdx"),
-                        rs.getString("imgUrl")
+                        rs.getString("imgUrl"),
+                        rs.getString("content")
                 ), selectUserPostsParam);
 
 

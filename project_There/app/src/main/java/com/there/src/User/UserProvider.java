@@ -27,8 +27,9 @@ public class UserProvider {
 
     }
 
+    // !-- ethan
+    // 유저 피드 조회 API
     public GetUserFeedRes retrieveUserFeed(int userIdx) throws BaseException {
-
 
         try {
 
@@ -37,6 +38,7 @@ public class UserProvider {
 
             GetUserFeedRes getUserFeed = new GetUserFeedRes(getUserInfo, getUserPosts);
             return getUserFeed;
+
         } catch (Exception exception) {
             System.out.println(exception);
             throw new BaseException(DATABASE_ERROR);

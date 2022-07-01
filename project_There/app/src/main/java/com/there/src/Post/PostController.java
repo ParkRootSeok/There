@@ -40,9 +40,7 @@ public class PostController {
 
         try {
 
-            //int userIdxByJwt = jwtService.getUserIdx();
-
-            PostPostRes postPostRes = postService.createPost(postPostReq.getUserIdx(), postPostReq);
+            PostPostRes postPostRes = postService.createPost(postPostReq);
 
             return new BaseResponse<>(postPostRes);
 

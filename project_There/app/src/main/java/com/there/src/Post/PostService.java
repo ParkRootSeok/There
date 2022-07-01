@@ -29,15 +29,13 @@ public class PostService {
 
     // !-- ethan
     // 게시물 생성
-    public PostPostRes createPost(int userIdx, PostPostReq postPostReq) throws BaseException {
+    public PostPostRes createPost(PostPostReq postPostReq) throws BaseException {
 
         try{
 
             // 게시물 DB에서 생성시 게시물 식별자 Dao에서 가져옴
-            int postIdx = postDao.insertPost(userIdx, postPostReq.getContent());
+            int postIdx = postDao.insertPost(postPostReq);
 
-            // 게시물 이미지 삽입
-            postDao.insertPostImg(postIdx, postPostReq.getImgUrl());
 
             return new PostPostRes(postIdx);
         }

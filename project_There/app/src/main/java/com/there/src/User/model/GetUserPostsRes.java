@@ -11,5 +11,6 @@ public class GetUserPostsRes {
 
     private int postIdx;
     private String imgUrl;
+    private String content;
 
 }
