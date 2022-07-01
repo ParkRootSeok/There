@@ -33,12 +33,10 @@ public class CommentService {
     public PostCommentRes createComment(int useridx, int postidx, PostCommentReq postCommentReq) throws BaseException {
         try {
             CommentDao.insertComment(useridx, postidx, postCommentReq);
+            return new PostCommentRes(useridx, postidx, postCommentReq.getContent());
         } catch (Exception exception) {
             throw new BaseException(BaseResponseStatus.DATABASE_ERROR);
         }
-
-
     }
-
 
 }

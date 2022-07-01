@@ -20,7 +20,7 @@ public class CommentContoroller {
     private final CommentService CommentService;
 
     @Autowired
-    public CommentContoroller(CommentProvider CommentProvider, CommentService CommentService){
+    public CommentContoroller(CommentProvider CommentProvider, CommentService CommentService) {
         this.CommentProvider = CommentProvider;
         this.CommentService = CommentService;
     }
@@ -29,16 +29,17 @@ public class CommentContoroller {
     @ResponseBody
     @PostMapping("/{userIdx}/{postidx}")
     public BaseResponse<PostCommentRes> createComment
-    (@PathVariable("useridx")int userIdx, @PathVariable("postIdx")int postIdx, @RequestBody PostCommentReq postCommentReq) {
+    (@PathVariable("useridx") int userIdx, @PathVariable("postIdx") int postIdx, @RequestBody PostCommentReq postCommentReq) {
 
         try {
             PostCommentRes postCommentRes = CommentService.createComment(userIdx, postIdx, postCommentReq);
+            return new BaseResponse<>(postCommentRes);
         } catch (BaseException exception) {
             return new BaseResponse<>(exception.getStatus());
         }
 
 
-
+=======
     }
-
 }
+
