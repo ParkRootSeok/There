@@ -23,8 +23,10 @@ public class CommentDao {
 
         String insertCommentQuery = "INSERT INTO Comment(postIdx, userIdx, content) VALUES (?, ?, ?);";
         Object[] insertCommentParam = new Object[]{postIdx, userIdx, content};
+        this.jdbcTemplate.update(insertCommentQuery, insertCommentParam);
 
-        return this.jdbcTemplate.update(insertCommentQuery, insertCommentParam);
+        String lastInsertIdxQuery = "select last_insert_id()";
+        return this.jdbcTemplate.queryForObject(lastInsertIdxQuery, int.class);
     }
 
     // 댓글 조회
