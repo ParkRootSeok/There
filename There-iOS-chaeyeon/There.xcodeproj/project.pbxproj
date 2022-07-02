@@ -15,9 +15,14 @@
 		0706DA71286EA6B400B7308B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0706DA6F286EA6B400B7308B /* LaunchScreen.storyboard */; };
 		077475C9286EB04400A6C5CE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077475C8286EB04400A6C5CE /* ChatViewController.swift */; };
 		077475CB286EB06900A6C5CE /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077475CA286EB06900A6C5CE /* MessageViewController.swift */; };
-		07E6FF61286F115600D0D926 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6FF60286F115600D0D926 /* SocketIOManager.swift */; };
-		07E6FF63286F143800D0D926 /* SocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6FF62286F143800D0D926 /* SocketViewController.swift */; };
 		07E6FF65286F273400D0D926 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E6FF64286F273400D0D926 /* Chat.storyboard */; };
+		2F7E7E04286F35A900CFB1B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E7E03286F35A900CFB1B3 /* ProfileViewController.swift */; };
+		2F7E7E07286F3AF000CFB1B3 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E7E05286F3AF000CFB1B3 /* ProfileCollectionViewCell.swift */; };
+		2F7E7E08286F3AF000CFB1B3 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7E7E06286F3AF000CFB1B3 /* ProfileCollectionViewCell.xib */; };
+		2F7E7E0B286FE68100CFB1B3 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E7E09286FE68100CFB1B3 /* PostCollectionViewCell.swift */; };
+		2F7E7E0C286FE68100CFB1B3 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7E7E0A286FE68100CFB1B3 /* PostCollectionViewCell.xib */; };
+		2F7E7E0F2870021400CFB1B3 /* IntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E7E0D2870021400CFB1B3 /* IntroCollectionViewCell.swift */; };
+		2F7E7E102870021400CFB1B3 /* IntroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7E7E0E2870021400CFB1B3 /* IntroCollectionViewCell.xib */; };
 		E87D9E57872CE36A051486C3 /* Pods_There.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C797A0BC03BDC11CFF55EA7 /* Pods_There.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,10 +37,16 @@
 		0706DA72286EA6B400B7308B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		077475C8286EB04400A6C5CE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		077475CA286EB06900A6C5CE /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
-		07E6FF60286F115600D0D926 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
-		07E6FF62286F143800D0D926 /* SocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewController.swift; sourceTree = "<group>"; };
 		07E6FF64286F273400D0D926 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		2ADEFFFFEE454DD6CF32AFF6 /* Pods-There.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There.release.xcconfig"; path = "Target Support Files/Pods-There/Pods-There.release.xcconfig"; sourceTree = "<group>"; };
+		2F7E7DFD286F339100CFB1B3 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MyPage.storyboard; path = "/Users/imina/Desktop/There-iOS/There-iOS-chaeyeon/There/MyPage.storyboard"; sourceTree = "<absolute>"; };
+		2F7E7E03286F35A900CFB1B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2F7E7E05286F3AF000CFB1B3 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F7E7E06286F3AF000CFB1B3 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		2F7E7E09286FE68100CFB1B3 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F7E7E0A286FE68100CFB1B3 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		2F7E7E0D2870021400CFB1B3 /* IntroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F7E7E0E2870021400CFB1B3 /* IntroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroCollectionViewCell.xib; sourceTree = "<group>"; };
 		3C797A0BC03BDC11CFF55EA7 /* Pods_There.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5ADBA77BE3A3DDC0C12045B /* Pods-There.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There.debug.xcconfig"; path = "Target Support Files/Pods-There/Pods-There.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +84,7 @@
 		0706DA63286EA6AF00B7308B /* There */ = {
 			isa = PBXGroup;
 			children = (
+				2F7E7DFC286F309700CFB1B3 /* MyPage */,
 				0706DA64286EA6AF00B7308B /* AppDelegate.swift */,
 				0706DA66286EA6AF00B7308B /* SceneDelegate.swift */,
 				0706DA68286EA6AF00B7308B /* ViewController.swift */,
@@ -82,11 +94,48 @@
 				0706DA6D286EA6B400B7308B /* Assets.xcassets */,
 				0706DA6F286EA6B400B7308B /* LaunchScreen.storyboard */,
 				0706DA72286EA6B400B7308B /* Info.plist */,
-				07E6FF60286F115600D0D926 /* SocketIOManager.swift */,
-				07E6FF62286F143800D0D926 /* SocketViewController.swift */,
 				07E6FF64286F273400D0D926 /* Chat.storyboard */,
 			);
 			path = There;
+			sourceTree = "<group>";
+		};
+		2F7E7DFC286F309700CFB1B3 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				2F7E7DFD286F339100CFB1B3 /* MyPage.storyboard */,
+				2F7E7E03286F35A900CFB1B3 /* ProfileViewController.swift */,
+				2F7E7E00286F345900CFB1B3 /* MyProfile */,
+				2F7E7E01286F348100CFB1B3 /* EditProfile */,
+				2F7E7E02286F348D00CFB1B3 /* Wallet */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		2F7E7E00286F345900CFB1B3 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				2F7E7E05286F3AF000CFB1B3 /* ProfileCollectionViewCell.swift */,
+				2F7E7E06286F3AF000CFB1B3 /* ProfileCollectionViewCell.xib */,
+				2F7E7E09286FE68100CFB1B3 /* PostCollectionViewCell.swift */,
+				2F7E7E0A286FE68100CFB1B3 /* PostCollectionViewCell.xib */,
+				2F7E7E0D2870021400CFB1B3 /* IntroCollectionViewCell.swift */,
+				2F7E7E0E2870021400CFB1B3 /* IntroCollectionViewCell.xib */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		2F7E7E01286F348100CFB1B3 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		2F7E7E02286F348D00CFB1B3 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wallet;
 			sourceTree = "<group>";
 		};
 		6506E566AA7C7783DFC54713 /* Frameworks */ = {
@@ -167,9 +216,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0706DA71286EA6B400B7308B /* LaunchScreen.storyboard in Resources */,
+				2F7E7E102870021400CFB1B3 /* IntroCollectionViewCell.xib in Resources */,
 				0706DA6E286EA6B400B7308B /* Assets.xcassets in Resources */,
+				2F7E7E0C286FE68100CFB1B3 /* PostCollectionViewCell.xib in Resources */,
 				07E6FF65286F273400D0D926 /* Chat.storyboard in Resources */,
 				0706DA6C286EA6AF00B7308B /* Main.storyboard in Resources */,
+				2F7E7E08286F3AF000CFB1B3 /* ProfileCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,12 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E6FF63286F143800D0D926 /* SocketViewController.swift in Sources */,
+				2F7E7E0B286FE68100CFB1B3 /* PostCollectionViewCell.swift in Sources */,
+				2F7E7E0F2870021400CFB1B3 /* IntroCollectionViewCell.swift in Sources */,
+				2F7E7E07286F3AF000CFB1B3 /* ProfileCollectionViewCell.swift in Sources */,
 				0706DA69286EA6AF00B7308B /* ViewController.swift in Sources */,
 				0706DA65286EA6AF00B7308B /* AppDelegate.swift in Sources */,
 				077475C9286EB04400A6C5CE /* ChatViewController.swift in Sources */,
 				0706DA67286EA6AF00B7308B /* SceneDelegate.swift in Sources */,
-				07E6FF61286F115600D0D926 /* SocketIOManager.swift in Sources */,
+				2F7E7E04286F35A900CFB1B3 /* ProfileViewController.swift in Sources */,
 				077475CB286EB06900A6C5CE /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +439,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,6 +470,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
