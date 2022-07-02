@@ -2,6 +2,7 @@ package com.there.src.Post;
 
 import com.there.src.Post.model.GetPostImgRes;
 import com.there.src.Post.model.GetPostRes;
+import com.there.src.Post.model.PostPostReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -40,25 +41,15 @@ public class PostDao {
 
     //!-- ethan
     // 게시물 생성함수
-    public int insertPost(int userIdx, String content){
-        String insertPostQuery = "INSERT INTO Post(userIdx, content) VALUES (?, ?)" ;
-        Object []insertPostParams = new Object[] {userIdx, content};
+    public int insertPost(PostPostReq postPostReq){
+        String insertPostQuery = "INSERT INTO Post(userIdx, imgUrl, content) VALUES (?, ?, ?)";
+        Object []insertPostParams = new Object[] {postPostReq.getUserIdx(), postPostReq.getImgUrl(), postPostReq.getContent()};
         this.jdbcTemplate.update(insertPostQuery,
                 insertPostParams);
         String lastInsertIdxQuery = "select last_insert_id()";
         return this.jdbcTemplate.queryForObject(lastInsertIdxQuery, int.class);
     }
 
-    // 이미지 넣어주는 함수
-    public int insertPostImg(int postIdx, String imgUrl){
-        String insertPostImgQuery = "INSERT INTO PostImgUrl(postIdx, imgUrl) VALUES (?, ?)" ;
-        Object []insertPostImgParams = new Object[] {postIdx, imgUrl};
-        this.jdbcTemplate.update(insertPostImgQuery,
-                insertPostImgParams);
-
-        String lastInsertIdxQuery = "select last_insert_id()";
-        return this.jdbcTemplate.queryForObject(lastInsertIdxQuery, int.class);
-    }
 
     //db 출력 확인
     public static void main(String[] args) {

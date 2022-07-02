@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/posts/history")
+@RequestMapping("/posts")
 public class PostController {
     final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -23,8 +23,6 @@ public class PostController {
     private final PostProvider postProvider;
     @Autowired
     private final PostService postService;
-
-
 
     public PostController(PostProvider postProvider, PostService postService){
         this.postProvider = postProvider;
@@ -46,9 +44,7 @@ public class PostController {
 
         try {
 
-            //int userIdxByJwt = jwtService.getUserIdx();
-
-            PostPostRes postPostRes = postService.createPost(postPostReq.getUserIdx(), postPostReq);
+            PostPostRes postPostRes = postService.createPost(postPostReq);
 
             return new BaseResponse<>(postPostRes);
 
