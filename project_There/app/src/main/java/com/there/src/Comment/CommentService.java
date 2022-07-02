@@ -2,8 +2,7 @@ package com.there.src.Comment;
 
 import com.there.config.BaseException;
 import com.there.config.BaseResponseStatus;
-import com.there.src.Comment.model.PostCommentsReq;
-import com.there.src.Comment.model.PostCommentsRes;
+import com.there.src.Comment.model.PostCommentRes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +24,10 @@ public class CommentService {
         this.CommentProvider = CommentProvider;
     }
 
-    public PostCommentsRes createComment(int userIdx, int postIdx, String content) throws BaseException {
+    public PostCommentRes createComment(int postIdx, int userIdx, String content) throws BaseException {
         try {
-            CommentDao.insertComment(userIdx, postIdx, content);
-            return new PostCommentsRes(userIdx, postIdx, content);
+            CommentDao.insertComment(postIdx, userIdx, content);
+            return new PostCommentRes(postIdx, userIdx, content);
         } catch (Exception exception) {
             throw new BaseException(BaseResponseStatus.DATABASE_ERROR);
         }

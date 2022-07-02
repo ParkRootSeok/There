@@ -1,7 +1,7 @@
 package com.there.src.Comment;
 
 import com.there.config.BaseException;
-import com.there.src.Comment.model.GetCommentsRes;
+import com.there.src.Comment.model.GetCommentRes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +23,10 @@ public class CommentProvider {
         this.CommentDao = CommentDao;
     }
 
-    public List<GetCommentsRes> retrieveComments(int userIdx, int postIdx) throws BaseException {
+    public List<GetCommentRes> retrieveComment(int postIdx) throws BaseException {
 
         try {
-            List<GetCommentsRes> getComments = CommentDao.selectComments(userIdx, postIdx);
+            List<GetCommentRes> getComments = CommentDao.selectComments(postIdx);
             return getComments;
         } catch (Exception exception) {
             throw new BaseException(DATABASE_ERROR);

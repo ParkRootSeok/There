@@ -5,8 +5,11 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class PostCommentsRes {
-    private int postIdx;
-    private int userIdx;
+public class GetCommentRes {
+
+    private String nickName;
+    private String profileImgUrl;
     private String content;
+    private String created_at;
+
 }
