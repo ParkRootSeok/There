@@ -10,6 +10,5 @@ import lombok.Setter;
 public class PostPostRes {
 
     private int postIdx;
-
 }
 
