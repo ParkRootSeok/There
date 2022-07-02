@@ -26,8 +26,8 @@ public class CommentService {
 
     public PostCommentRes createComment(int postIdx, int userIdx, String content) throws BaseException {
         try {
-            CommentDao.insertComment(postIdx, userIdx, content);
-            return new PostCommentRes(postIdx, userIdx, content);
+            int commentIdx = CommentDao.insertComment(postIdx, userIdx, content);
+            return new PostCommentRes(commentIdx);
         } catch (Exception exception) {
             throw new BaseException(BaseResponseStatus.DATABASE_ERROR);
         }

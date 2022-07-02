@@ -7,8 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class PostCommentRes {
 
-    private int postIdx;
-    private int userIdx;
-    private String content;
+    private int commentIdx;
 
 }
