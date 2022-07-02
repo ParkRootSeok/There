@@ -567,7 +567,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="340" id="C0H-Ax-9Vk"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="334" id="Wt2-AO-iGh"/>
-                                    <constraint firstAttribute="width" constant="335" id="vuR-gc-DPx"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그림에 대한 설명..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw5-Q5-ZqR">

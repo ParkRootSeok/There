@@ -13,10 +13,6 @@
 		0706DA6C286EA6AF00B7308B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0706DA6A286EA6AF00B7308B /* Main.storyboard */; };
 		0706DA6E286EA6B400B7308B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0706DA6D286EA6B400B7308B /* Assets.xcassets */; };
 		0706DA71286EA6B400B7308B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0706DA6F286EA6B400B7308B /* LaunchScreen.storyboard */; };
-		077475C9286EB04400A6C5CE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077475C8286EB04400A6C5CE /* ChatViewController.swift */; };
-		077475CB286EB06900A6C5CE /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077475CA286EB06900A6C5CE /* MessageViewController.swift */; };
-		07E6FF61286F115600D0D926 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6FF60286F115600D0D926 /* SocketIOManager.swift */; };
-		07E6FF63286F143800D0D926 /* SocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6FF62286F143800D0D926 /* SocketViewController.swift */; };
 		07E6FF65286F273400D0D926 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E6FF64286F273400D0D926 /* Chat.storyboard */; };
 		2F7E7E04286F35A900CFB1B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E7E03286F35A900CFB1B3 /* ProfileViewController.swift */; };
 		2F7E7E07286F3AF000CFB1B3 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E7E05286F3AF000CFB1B3 /* ProfileCollectionViewCell.swift */; };
@@ -35,10 +31,6 @@
 		0706DA6D286EA6B400B7308B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0706DA70286EA6B400B7308B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0706DA72286EA6B400B7308B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		077475C8286EB04400A6C5CE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		077475CA286EB06900A6C5CE /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
-		07E6FF60286F115600D0D926 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
-		07E6FF62286F143800D0D926 /* SocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewController.swift; sourceTree = "<group>"; };
 		07E6FF64286F273400D0D926 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		2ADEFFFFEE454DD6CF32AFF6 /* Pods-There.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There.release.xcconfig"; path = "Target Support Files/Pods-There/Pods-There.release.xcconfig"; sourceTree = "<group>"; };
 		2F7E7DFD286F339100CFB1B3 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MyPage.storyboard; path = "/Users/imina/Desktop/There-iOS/There-iOS-chaeyeon/There/MyPage.storyboard"; sourceTree = "<absolute>"; };
@@ -89,13 +81,9 @@
 				0706DA66286EA6AF00B7308B /* SceneDelegate.swift */,
 				0706DA68286EA6AF00B7308B /* ViewController.swift */,
 				0706DA6A286EA6AF00B7308B /* Main.storyboard */,
-				077475CA286EB06900A6C5CE /* MessageViewController.swift */,
-				077475C8286EB04400A6C5CE /* ChatViewController.swift */,
 				0706DA6D286EA6B400B7308B /* Assets.xcassets */,
 				0706DA6F286EA6B400B7308B /* LaunchScreen.storyboard */,
 				0706DA72286EA6B400B7308B /* Info.plist */,
-				07E6FF60286F115600D0D926 /* SocketIOManager.swift */,
-				07E6FF62286F143800D0D926 /* SocketViewController.swift */,
 				07E6FF64286F273400D0D926 /* Chat.storyboard */,
 			);
 			path = There;
@@ -274,15 +262,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F7E7E0B286FE68100CFB1B3 /* PostCollectionViewCell.swift in Sources */,
-				07E6FF63286F143800D0D926 /* SocketViewController.swift in Sources */,
 				2F7E7E07286F3AF000CFB1B3 /* ProfileCollectionViewCell.swift in Sources */,
 				0706DA69286EA6AF00B7308B /* ViewController.swift in Sources */,
 				0706DA65286EA6AF00B7308B /* AppDelegate.swift in Sources */,
-				077475C9286EB04400A6C5CE /* ChatViewController.swift in Sources */,
 				0706DA67286EA6AF00B7308B /* SceneDelegate.swift in Sources */,
-				07E6FF61286F115600D0D926 /* SocketIOManager.swift in Sources */,
 				2F7E7E04286F35A900CFB1B3 /* ProfileViewController.swift in Sources */,
-				077475CB286EB06900A6C5CE /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
