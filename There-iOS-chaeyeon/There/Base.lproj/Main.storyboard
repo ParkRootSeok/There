@@ -675,8 +675,96 @@
             </objects>
             <point key="canvasLocation" x="679.71014492753625" y="910.71428571428567"/>
         </scene>
+        <!--WritePost-->
+        <scene sceneID="boO-cp-AmH">
+            <objects>
+                <viewController storyboardIdentifier="WritePost" title="WritePost" id="XF1-SM-d30" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feI-l2-wpx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-eD-lFl">
+                                <rect key="frame" x="0.0" y="32" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="hyR-Uf-pwI">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="7NW-dx-hLn">
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="등록" id="3oo-mL-6FY">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tHx-Eb-dCn">
+                                <rect key="frame" x="15" y="92" width="40" height="37.5"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="4DP-Ta-70O"/>
+                                    <constraint firstAttribute="width" constant="40" id="F9v-Na-V2d"/>
+                                    <constraint firstAttribute="height" constant="40" id="KhF-XF-GlU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.metering.center.weighted" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="txO-Nr-WYz">
+                                <rect key="frame" x="65" y="87" width="40" height="37.5"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="JMC-Hv-Ozn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="b5H-yc-VI0"/>
+                                    <constraint firstAttribute="height" constant="40" id="gwS-JI-q0w"/>
+                                    <constraint firstAttribute="width" constant="40" id="mY8-Na-dG8"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOf-8h-VTl">
+                                <rect key="frame" x="0.0" y="136" width="414" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="5SR-Yw-hPr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmW-6y-BJJ">
+                                <rect key="frame" x="0.0" y="178" width="414" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="DEc-oy-L80"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3gg-Ca-VMr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="txO-Nr-WYz" firstAttribute="leading" secondItem="tHx-Eb-dCn" secondAttribute="trailing" constant="10" id="Azb-Sf-esm"/>
+                            <constraint firstItem="4WX-eD-lFl" firstAttribute="trailing" secondItem="oOf-8h-VTl" secondAttribute="trailing" id="Cmo-op-mDv"/>
+                            <constraint firstItem="4WX-eD-lFl" firstAttribute="top" secondItem="feI-l2-wpx" secondAttribute="topMargin" constant="-12" id="GRh-KN-Fwu"/>
+                            <constraint firstItem="txO-Nr-WYz" firstAttribute="top" secondItem="4WX-eD-lFl" secondAttribute="bottom" constant="10" id="I8g-4i-Waw"/>
+                            <constraint firstItem="tHx-Eb-dCn" firstAttribute="leading" secondItem="3gg-Ca-VMr" secondAttribute="leading" constant="15" id="Ia0-5U-V6e"/>
+                            <constraint firstItem="4WX-eD-lFl" firstAttribute="leading" secondItem="oOf-8h-VTl" secondAttribute="leading" id="JI0-Dd-Th6"/>
+                            <constraint firstItem="txO-Nr-WYz" firstAttribute="leading" secondItem="tHx-Eb-dCn" secondAttribute="trailing" constant="10" id="Jn6-ZO-8mW"/>
+                            <constraint firstItem="oOf-8h-VTl" firstAttribute="trailing" secondItem="3gg-Ca-VMr" secondAttribute="trailing" id="KK1-1Y-ZpV"/>
+                            <constraint firstItem="mmW-6y-BJJ" firstAttribute="trailing" secondItem="3gg-Ca-VMr" secondAttribute="trailing" id="OSP-Ua-nBV"/>
+                            <constraint firstItem="oOf-8h-VTl" firstAttribute="top" secondItem="tHx-Eb-dCn" secondAttribute="bottom" constant="5" id="R1Y-jd-Fjv"/>
+                            <constraint firstItem="tHx-Eb-dCn" firstAttribute="leading" secondItem="3gg-Ca-VMr" secondAttribute="leading" constant="15" id="Vwp-7M-9mh"/>
+                            <constraint firstItem="oOf-8h-VTl" firstAttribute="leading" secondItem="3gg-Ca-VMr" secondAttribute="leading" id="XkP-Be-h74"/>
+                            <constraint firstItem="mmW-6y-BJJ" firstAttribute="top" secondItem="oOf-8h-VTl" secondAttribute="bottom" constant="40" id="ch5-uk-nFF"/>
+                            <constraint firstItem="txO-Nr-WYz" firstAttribute="leading" secondItem="tHx-Eb-dCn" secondAttribute="trailing" constant="10" id="dQi-oH-kYm"/>
+                            <constraint firstItem="txO-Nr-WYz" firstAttribute="leading" secondItem="tHx-Eb-dCn" secondAttribute="trailing" constant="10" id="f0c-x6-gtE"/>
+                            <constraint firstItem="tHx-Eb-dCn" firstAttribute="top" secondItem="4WX-eD-lFl" secondAttribute="bottom" constant="15" id="gv0-vx-yiN"/>
+                            <constraint firstItem="tHx-Eb-dCn" firstAttribute="top" secondItem="4WX-eD-lFl" secondAttribute="bottom" constant="15" id="hUp-je-Rgx"/>
+                            <constraint firstItem="mmW-6y-BJJ" firstAttribute="leading" secondItem="3gg-Ca-VMr" secondAttribute="leading" id="xMi-R8-MQd"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="j08-WL-XYN"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gV8-Aa-2vJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1442.0289855072465" y="910.71428571428567"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="camera.metering.center.weighted" catalog="system" width="128" height="93"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="creditcard.fill" catalog="system" width="128" height="88"/>
         <image name="folder" catalog="system" width="128" height="97"/>
@@ -684,6 +772,7 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
         <image name="trash" catalog="system" width="121" height="128"/>
