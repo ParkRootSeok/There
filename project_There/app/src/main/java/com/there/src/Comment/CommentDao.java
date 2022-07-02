@@ -1,7 +1,6 @@
 package com.there.src.Comment;
 
-import com.there.src.Comment.model.GetCommentsRes;
-import com.there.src.Comment.model.PostCommentsReq;
+import com.there.src.Comment.model.GetCommentRes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -29,16 +28,18 @@ public class CommentDao {
     }
 
     // 댓글 조회
-    public List<GetCommentsRes> selectComments(int userIdx, int postIdx) {
+    public List<GetCommentRes> selectComments(int postIdx) {
 
-        String selectPostCommentsQuery = "SELECT u.nickName, c.content FROM Comment c, User u WHERE c.postIdx = ? and u.userIdx = ? and c.userIdx = ?;";
-        Object[] selectPostCommentsParams = new Object[]{postIdx, userIdx, userIdx};
+        String selectPostCommentsQuery = "select nickName, profileImgUrl, content, created_at\n" +
+                "from Comment c join User as u on u.userIdx = c.userIdx\n" +
+                "where c.postidx = ?;";
+        int selectPostCommentsParams = postIdx;
 
-        return this.jdbcTemplate.query(selectPostCommentsQuery, (rs, rowNum) -> new GetCommentsRes(
+        return this.jdbcTemplate.query(selectPostCommentsQuery, (rs, rowNum) -> new GetCommentRes(
                 rs.getString("nickName"),
-                rs.getString("content")
+                rs.getString("profileImgUrl"),
+                rs.getString("content"),
+                rs.getString("created_at")
         ), selectPostCommentsParams);
-
     }
-
 }
