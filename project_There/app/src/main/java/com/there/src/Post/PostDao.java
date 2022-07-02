@@ -26,9 +26,7 @@ public class PostDao {
 
     // 게시글 조회
     public GetPostRes selectPost(int postIdx){
-        String selectPostQuery = "select postIdx, imgUrl, content \n" +
-                "from Post as p join User as u on u.userIdx = p.userIdx\n"+
-                "where p.postIdx =;?";
+        String selectPostQuery = "select * from Post where postIdx = ?";
         int selectPostsParam = postIdx;
 
         return this.jdbcTemplate.queryForObject(selectPostQuery,
