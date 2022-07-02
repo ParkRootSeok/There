@@ -1,7 +1,7 @@
 package com.there.src.Comment;
 
-import com.there.src.Comment.model.GetCommentRes;
-import com.there.src.Comment.model.PostCommentReq;
+import com.there.src.Comment.model.GetCommentsRes;
+import com.there.src.Comment.model.PostCommentsReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -20,25 +20,24 @@ public class CommentDao {
     }
 
     // 댓글 생성
-    public int insertComment(int postIdx, int UserIdx, PostCommentReq postCommentReq) {
+    public int insertComment(int postIdx, int userIdx, String content) {
 
-        String insertCommentQuery = "INSERT INTO Comment(postIdx, userIdx, content) valuse(postIdx,userIdx,?)";
-        String insertCommentParam = postCommentReq.getContent();
+        String insertCommentQuery = "INSERT INTO Comment(postIdx, userIdx, content) VALUES (?, ?, ?);";
+        Object[] insertCommentParam = new Object[]{postIdx, userIdx, content};
 
         return this.jdbcTemplate.update(insertCommentQuery, insertCommentParam);
     }
 
     // 댓글 조회
-    public List<GetCommentRes> selectComments(int postidx, int useridx) {
+    public List<GetCommentsRes> selectComments(int userIdx, int postIdx) {
 
-        String selectCommentsQuery = "select u.nickname, c.content" +
-                                     "from Comment c, User u " +
-                                     "where c.postidx = ? and c.useridx = ? and u.useridx = ?";
-        Object[] selectCommentsParams = new Object[]{postidx, useridx, useridx};
-        return this.jdbcTemplate.query(selectCommentsQuery, (rs, rowNum) -> new GetCommentRes(
-                rs.getString("nickname"),
+        String selectPostCommentsQuery = "SELECT u.nickName, c.content FROM Comment c, User u WHERE c.postIdx = ? and u.userIdx = ? and c.userIdx = ?;";
+        Object[] selectPostCommentsParams = new Object[]{postIdx, userIdx, userIdx};
+
+        return this.jdbcTemplate.query(selectPostCommentsQuery, (rs, rowNum) -> new GetCommentsRes(
+                rs.getString("nickName"),
                 rs.getString("content")
-        ), selectCommentsParams);
+        ), selectPostCommentsParams);
 
     }
 

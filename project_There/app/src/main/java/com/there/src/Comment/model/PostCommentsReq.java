@@ -5,9 +5,6 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class GetCommentReq {
-
-    private int userIdx;
+public class PostCommentsReq {
     private String content;
-
 }
