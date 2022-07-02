@@ -60,6 +60,11 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
                         }
                 return cell
         case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.identifier, for: indexPath)
+                        as? ProfileCollectionViewCell else {
+                            fatalError("셀 타입 캐스팅 실패")
+                        }
+                return cell
             //intro
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath)
@@ -80,9 +85,10 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
         case 0:
             return CGSize(width: collectionView.frame.width, height: CGFloat(159))
         case 1:
+            return CGSize(width: collectionView.frame.width, height: CGFloat(159))
             //intro
         default:
-            let side = CGFloat((collectionView.frame.width, /3)-(4/3))
+            let side = CGFloat((collectionView.frame.width/3)-(4/3))
             return CGSize(width: side, height: side)
         }
     }
