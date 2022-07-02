@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/imina/Desktop/There-iOS/There-iOS-chaeyeon/There/MyPage.storyboard">
-   </FileRef>
-   <FileRef
       location = "group:There.xcodeproj">
    </FileRef>
    <FileRef
