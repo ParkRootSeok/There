@@ -16,22 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwg-3g-uaC">
-                                <rect key="frame" x="210" y="402" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oce-yf-sNX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="750"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n7N-JU-TzB">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q0a-eU-DpJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q0a-eU-DpJ" firstAttribute="trailing" secondItem="oce-yf-sNX" secondAttribute="trailing" id="XxV-dn-FfV"/>
+                            <constraint firstItem="oce-yf-sNX" firstAttribute="top" secondItem="Q0a-eU-DpJ" secondAttribute="top" id="bgg-tM-NpC"/>
+                            <constraint firstItem="oce-yf-sNX" firstAttribute="leading" secondItem="Q0a-eU-DpJ" secondAttribute="leading" id="had-iO-Wee"/>
+                            <constraint firstItem="Q0a-eU-DpJ" firstAttribute="bottom" secondItem="oce-yf-sNX" secondAttribute="bottom" constant="68" id="idN-tD-jct"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="hmm-Dy-e2B"/>
+                    <connections>
+                        <outlet property="ProfileCollectionView" destination="oce-yf-sNX" id="Wye-12-Zuk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhf-Wf-Jqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402" y="-992"/>
+            <point key="canvasLocation" x="401.44927536231887" y="-992.41071428571422"/>
         </scene>
     </scenes>
     <resources>
