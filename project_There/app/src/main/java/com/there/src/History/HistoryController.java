@@ -2,6 +2,7 @@ package com.there.src.History;
 
 import com.there.config.BaseException;
 import com.there.config.BaseResponse;
+import com.there.src.History.model.GetHistoryRes;
 import com.there.src.History.model.PostHistoryReq;
 import com.there.src.History.model.PostHistoryRes;
 import org.slf4j.Logger;
@@ -47,7 +48,16 @@ public class HistoryController {
             return new BaseResponse<>((exception.getStatus()));
         }
     }
+    @ResponseBody
+    @GetMapping("/{historyIdx}")
+    public BaseResponse<GetHistoryRes> getHistory(@PathVariable("historyIdx")int historyIdx){
+        try{
+            GetHistoryRes getHistory = historyProvider.retrieveHistory(historyIdx);
 
+            return new BaseResponse<>(getHistory);
 
-
+        } catch(BaseException exception) {
+            return new BaseResponse<>((exception.getStatus()));
+        }
+    }
 }
