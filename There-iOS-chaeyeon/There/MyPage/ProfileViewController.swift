@@ -104,7 +104,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
         case 1:
             return CGSize(width: collectionView.frame.width, height: CGFloat(150))
         default:
-            let side = CGFloat((collectionView.frame.width /3)-(4/3))
+            let side = CGFloat((collectionView.frame.width/3)-(4/3))
             return CGSize(width: side, height: side)
         }
     }

@@ -11,7 +11,7 @@ class IntroCollectionViewCell: UICollectionViewCell {
     static let identifier = "IntroCollectionViewCell"
     
     @IBOutlet weak var introLabel: UILabel!
-    self.introLabel.numberOfLines = 0 //자동줄바꿈
+    //self.introLabel.numberOfLines = 0 //자동줄바꿈
     
     @IBOutlet weak var introView: UIView!
     
