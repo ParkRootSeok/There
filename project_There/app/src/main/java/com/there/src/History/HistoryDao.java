@@ -42,18 +42,15 @@ public class HistoryDao {
     // 히스토리 게시글 조회
     public GetHistoryRes selectHisPostInfo(int historyIdx) {
         this.historyIdx = historyIdx;
-        String selectHisPostInfoQuery = "select * from History where historyIdx = ?";
+        String selectHisPostInfoQuery = "select * from History where historyIdx =?";
         int selectHisPostsParam = historyIdx;
 
         return this.jdbcTemplate.queryForObject(selectHisPostInfoQuery,
                 (rs, rowNum) -> new GetHistoryRes(
                         rs.getInt("historyIdx"),
-                        rs.getInt("postIdx"),
                         rs.getString("title"),
                         rs.getString("imgUrl"),
-                        rs.getString("content"),
-                        rs.getString("created_At"),
-                        rs.getString("status")),
+                        rs.getString("content")),
                 selectHisPostsParam);
     }
 
@@ -84,10 +81,10 @@ public class HistoryDao {
 
     //db 출력 확인
     public static void main(String[] args) {
-            HistoryDao historyDao = new HistoryDao();
-            GetPostRes post = historyDao.selectPostInfo(1);
+        HistoryDao historyDao = new HistoryDao();
+        GetPostRes post = historyDao.selectPostInfo(1);
 
-            System.out.println(post.getPostIdx());
+        System.out.println(post.getPostIdx());
 
     }
 

@@ -21,11 +21,11 @@ public class HistoryProvider {
     }
 
     // 히스토리 조회
-    public GetHistoryRes retrieveHistory(int history) throws BaseException {
+    public GetHistoryRes retrieveHistory(int historyIdx) throws BaseException {
         try {
-            GetHistoryRes getHistory = historyDao.selectHisPostInfo(historyIdx);
+            GetHistoryRes getHistoryRes = historyDao.selectHisPostInfo(historyIdx);
 
-            return getHistory;
+            return getHistoryRes;
         } catch (Exception exception) {
             System.out.println(exception);
             throw new BaseException(BaseResponseStatus.DATABASE_ERROR);
