@@ -23,11 +23,11 @@ public class PostProvider {
         this.postDao = postDao;
     }
 
-
-    // 게시글
+    // 게시글 조회
     public GetPostRes retrievePost(int postIdx) throws BaseException{
 
         try{
+
             GetPostRes getPostRes = postDao.selectPost(postIdx);
 
             return getPostRes;
@@ -36,5 +36,4 @@ public class PostProvider {
             throw new BaseException(DATABASE_ERROR);
         }
     }
-
 }
