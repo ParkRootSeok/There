@@ -6,10 +6,8 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class GetPostImgRes {
-    private int pictureIdx;
-    private int postIdx;
-    private String imgUrl;
-    private String content;
-    private String create_At;
-    private String status;
+     private int pictureIdx;
+     private String imgUrl;
+     private String content;
+
 }

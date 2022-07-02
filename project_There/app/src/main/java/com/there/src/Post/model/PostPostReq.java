@@ -12,6 +12,7 @@ import lombok.Setter;
 public class PostPostReq {
 
     private int userIdx;
+    private int postIdx;
     private String content;
     private String imgUrl;
 
