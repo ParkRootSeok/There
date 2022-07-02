@@ -11,9 +11,16 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet var profileCollectionView: UICollectionView!
     
+    @IBOutlet var postButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        
+        //기록하기 버튼 속성
+        postButton.layer.cornerRadius = 5
+        postButton.layer.borderColor = UIColor.lightGray.cgColor
+        postButton.layer.borderWidth = 1
         
     }
     
@@ -25,11 +32,22 @@ class ProfileViewController: UIViewController {
         //profile cell 등록
         profileCollectionView.register(UINib(nibName: "ProfileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ProfileCollectionViewCell.identifier)
         
+        //intro cell 등록
+                profileCollectionView.register(UINib(nibName: "IntroCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: IntroCollectionViewCell.identifier)
+        
         //post cell 등록
         profileCollectionView.register(UINib(nibName: "PostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
+        
+        
+        
     }
-
+    
+    @IBAction func postPressed(_ sender: Any) {
+        //posting 화면으로 전환
+    }
+    
 }
+
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     //section 개수: 3개 (profile, introduction, post)
@@ -42,7 +60,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         switch section{
         case 0: //profile
             return 1
-        case 1: //introduction -> 아직안만듬
+        case 1: //introduction
             return 1
         default: //post
             return 24
@@ -60,7 +78,11 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
                         }
                 return cell
         case 1:
-            //intro
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IntroCollectionViewCell.identifier, for: indexPath)
+                        as? IntroCollectionViewCell else {
+                            fatalError("셀 타입 캐스팅 실패")
+                        }
+                return cell
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath)
                         as? PostCollectionViewCell else {
@@ -80,7 +102,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
         case 0:
             return CGSize(width: collectionView.frame.width, height: CGFloat(159))
         case 1:
-            //intro
+            return CGSize(width: collectionView.frame.width, height: CGFloat(150))
         default:
             let side = CGFloat((collectionView.frame.width /3)-(4/3))
             return CGSize(width: side, height: side)

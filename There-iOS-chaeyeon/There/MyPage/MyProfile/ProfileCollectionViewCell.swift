@@ -45,5 +45,13 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         [followerCountLabel,followingCountLabel]
             .forEach { $0.text = "\(Int.random(in: 0...10))"} //임시
     }
-
+    
+    
+    @IBAction func editProfilePressed(_ sender: Any) {
+    //Edit Profile 화면 전환
+    }
+    @IBAction func walletPressed(_ sender: Any) {
+        //Wallet 화면 전환
+    }
+    
 }
